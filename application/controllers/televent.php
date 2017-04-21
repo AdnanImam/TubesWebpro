@@ -7,5 +7,17 @@
     public function index(){
       $this->load->view('index');
     }
+    public function login(){
+      $this->load->view('login');
+    }
+    public function createevent(){
+      $this->load->view('create_event');
+    }
+    public function registercostumer(){
+      $this->load->view('register_costumer');
+    }
+    public function registerowner(){
+      $this->load->view('register_owner');
+    }
   }
  ?>

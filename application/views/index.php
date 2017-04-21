@@ -2,17 +2,17 @@
   <base href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/">
       <div id="slider">
       <figure>
-        <img src="<?php echo base_url('images/slider1.png'); ?>" width="auto" height="600px" />
-        <img src="<?php echo base_url('images/slider2.png'); ?>" width="auto" height="600px" />
-        <img src="<?php echo base_url('images/slider1.png'); ?>" width="auto" height="600px" />
-        <img src="<?php echo base_url('images/slider2.png'); ?>" width="auto" height="600px" />
+        <img src="<?php echo base_url('images/slider1.png'); ?>" width="auto" height="660px" />
+        <img src="<?php echo base_url('images/slider2.png'); ?>" width="auto" height="660px" />
+        <img src="<?php echo base_url('images/slider1.png'); ?>" width="auto" height="660px" />
+        <img src="<?php echo base_url('images/slider2.png'); ?>" width="auto" height="660px" />
         </figure>
 
         <div class="posisi-header">
           <div class="logo-font header-slogan">Telkom University Event</div>
           <div class="logo-font header-sub-slogan">welcome to Televent... be yourself. do your thing. see what's going on.</div>
           <div class="button">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            <button  onclick="location.href='<?php echo base_url();?>index.php/televent/createevent'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  >
               Create Event
             </button>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
