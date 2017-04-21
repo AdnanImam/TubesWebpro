@@ -1,0 +1,104 @@
+
+    .demo-card-square.mdl-card {
+          width: 320px;
+          height: 320px;
+          }
+          .demo-card-square > .mdl-card__title {
+          color: #fff;
+          background:
+          url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+          }
+
+        header.custom-header {
+          background: #B71C1C;
+        }
+        .mdl-layout__header-row span.mdl-layout-title {
+          color: #fffff;
+          text-transform: uppercase;
+        }
+        .custom-header .material-icons {
+          color: #fff;
+        }
+        .custom-header a.mdl-navigation__link {
+          color: #fff;
+          font-weight: 700;
+          font-size: 14px;
+        }
+        .custom-header a.mdl-navigation__link:hover {
+          border-bottom: 10px solid #fff;
+        }
+        .mdl-layout__drawer span.mdl-layout-title {
+          background: #B71C1C;
+          color: #fff;
+        }
+        .mdl-layout__drawer a.mdl-navigation__link {
+          color: #eee;
+          font-weight: 700;
+          font-size: 14px;
+        }
+        .mdl-layout__drawer a.mdl-navigation__link:hover {
+          color: #000;
+        }
+        .headerindex {
+          position: relative;
+          height: 800px;
+          width: auto;
+        }
+
+        @keyframes slidy {
+          0% { left: 0%; }
+          20% { left: 0%; }
+          25% { left: -100%; }
+          45% { left: -100%; }
+          50% { left: -200%; }
+          70% { left: -200%; }
+          75% { left: -300%; }
+          95% { left: -300%; }
+          100% { left: -400%; }
+          }
+
+          body { margin: 0; }
+          div#slider { overflow: hidden; position: relative;}
+          div#slider figure img { width: 20%; float: left; }
+          div#slider figure {
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            text-align: left;
+            font-size: 0;
+            animation: 30s slidy infinite;
+          }
+          .button {
+            position: absolute;
+            top: 48%;
+            left: 45%;
+            margin-top: -100px;
+            margin-left: -100px;
+            }
+              .logo-font {
+                font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+                line-height: 1;
+                color: #000;
+                font-weight: 500;
+              }
+
+              .header-slogan {
+                font-size: 60px;
+                padding-top: 160px;
+              }
+
+              .header-sub-slogan {
+                font-size: 21px;
+                padding-top: 24px;
+              }
+
+              .posisi-header{
+                position: absolute;
+                height: 800px;
+                width: auto;
+                top: 10%;
+                left: 33%;
+                margin-top: -100px;
+                margin-left: -100px;
+              }

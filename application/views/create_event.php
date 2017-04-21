@@ -1,8 +1,9 @@
 <?php include'head.php'; ?>
-
 <!-- Wide card with share menu button -->
 <style>
 .demo-card-wide.mdl-card {
+  position:inherit;
+  top: 20%;
   width: 512px;
 }
 .demo-card-wide > .mdl-card__title {
@@ -36,7 +37,6 @@
   right: 0;
 }
 </style>
-<center>
 <div class="demo-card-wide mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title">
       <h2 class="mdl-card__title-text">BUAT EVENT BARU</h2>
@@ -77,5 +77,3 @@
       </a>
 </div>
 </div>
-</center>
-<?php include 'foot.php'; ?>
