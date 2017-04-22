@@ -1,14 +1,14 @@
 <?php include'head.php'; ?>
+
 <!-- Wide card with share menu button -->
 <style>
 .demo-card-wide.mdl-card {
-  position:inherit;
-  top: 20%;
-  width: 512px;
+  top: 30px;
+  width: 800px;
 }
 .demo-card-wide > .mdl-card__title {
   color: #fff;
-  background: #BDBDBD;
+  background: #B71C1C;
   height: 60px;
 
 }
@@ -16,6 +16,10 @@
   color: #fff;
 }
 .demo-card-wide > .mdl-card__actions > .mdl-button {
+  color: #fff;
+  background: #424242;
+}
+.demo-card-wide > .mdl-card__actions > .mdl-button:hover {
   color: #fff;
   background: #B71C1C;
 }
@@ -37,6 +41,7 @@
   right: 0;
 }
 </style>
+<center>
 <div class="demo-card-wide mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title">
       <h2 class="mdl-card__title-text">BUAT EVENT BARU</h2>
@@ -45,35 +50,32 @@
     <div class="mdl-card__supporting-text">
       <form class="" action="#" method="post">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" id="nama" name="nama">
-          <label class="mdl-textfield__label" for="nama">NAMA EVENT</label>
+          <input class="mdl-textfield__input" type="text" id="nama" name="nama"  placeholder="NAMA ACARA">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" id="lokasi" name="lokasi">
-          <label class="mdl-textfield__label" for="lokasi">LOKASI</label>
+          <input class="mdl-textfield__input" type="text" id="lokasi" name="lokasi"  placeholder="LOKASI">
+          </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
+          <input class="mdl-textfield__input" type="text" id="hari" name="hari"  placeholder="HARI">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" id="hari" name="hari">
-          <label class="mdl-textfield__label" for="hari">HARI</label>
+          <input class="mdl-textfield__input" type="date" id="tanggal" name="tanggal"  placeholder="TANGGAL">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="date" id="tanggal" name="tanggal">
-          <label class="mdl-textfield__label" for="tanggal">TANGGAL</label>
+          <input class="mdl-textfield__input" type="time" id="pukul" name="pukul"  placeholder="PUKUL">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="time" id="pukul" name="pukul">
-          <label class="mdl-textfield__label" for="pukul">PUKUL MULAI</label>
+          <textarea rows="10" cols="70" class="mdl-textfield__input" type="text" id="desk" name="desk" placeholder="DESKRIPSI">
+          </textarea>
         </div>
               <!-- Upload File -->
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="file" id="gambar" name="gambar">
-          <label class="mdl-textfield__label" for="gambar">UPLOAD GAMBAR</label>
+          <input class="mdl-textfield__input" type="file" id="gambar" name="gambar"  placeholder="UPLOAD GAMBAR ACARA">
         </div>
       </form>
     </div>
     <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--12-col">
-        Buat
-      </a>
-</div>
-</div>
+      <input type="submit" name="submit" value="BUAT" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--12-col">
+  </div>
+  </div>
+  </center>
