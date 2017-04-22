@@ -24,7 +24,7 @@
         <link type="text/css" href="<?php echo base_url('files/modelcss.css') ?>" rel="stylesheet">
 
   </head>
-  <body>
+  <body bgcolor = "#EEEEEE">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="custom-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
@@ -55,5 +55,3 @@
         </div>
       </header>
       </div>
-      <main class="mdl-layout__content">
-        <div class="page-content"><!-- Your content goes here -->

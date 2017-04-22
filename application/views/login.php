@@ -9,7 +9,7 @@
     }
     .demo-card-wide > .mdl-card__title {
       color: #fff;
-      background: #BDBDBD;
+      background: #B71C1C;
       height: 60px;
 
     }
@@ -17,6 +17,10 @@
       color: #fff;
     }
     .demo-card-wide > .mdl-card__actions > .mdl-button {
+      color: #fff;
+      background:#424242;
+    }
+    .demo-card-wide > .mdl-card__actions > .mdl-button:hover {
       color: #fff;
       background: #B71C1C;
     }
@@ -29,22 +33,18 @@
       <div class="mdl-card__supporting-text">
         <form class="" action="#" method="post">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-            <input class="mdl-textfield__input" type="text" name="uname">
-            <label class="mdl-textfield__label" for="uname">Username</label>
+            <input class="mdl-textfield__input" type="text" name="uname" placeholder="USERNAME">
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-            <input class="mdl-textfield__input" type="password" name="password">
-            <label class="mdl-textfield__label" for="password">Password</label>
+            <input class="mdl-textfield__input" type="password" name="password" placeholder="PASSWORD">
           </div>
         </form>
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--12-col">
-          LOGIN
-        </a>
+          <input type="submit" name="login" value="LOGIN" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--12-col">
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--12-col">
+        <a href="<?php echo base_url('index.php/televent/register') ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--12-col">
           REGISTER
         </a>
       </div>

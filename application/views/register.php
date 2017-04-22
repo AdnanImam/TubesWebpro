@@ -2,11 +2,12 @@
 
 <style>
 .demo-card-wide.mdl-card {
-  width: 512px;
+  top: 30px;
+  width: 800px;
 }
 .demo-card-wide > .mdl-card__title {
   color: #fff;
-  background: #9e9e9e;
+  background: #B71C1C;
   height: 60px;
 
 }
@@ -14,6 +15,10 @@
   color: #fff;
 }
 .demo-card-wide > .mdl-card__actions > .mdl-button {
+  color: #fff;
+  background: #424242;
+}
+.demo-card-wide > .mdl-card__actions > .mdl-button:hover {
   color: #fff;
   background: #B71C1C;
 }
@@ -34,45 +39,39 @@
 .mdl-textfield--file .mdl-button--file {
   right: 0;
 }
-
 </style>
 
 <center>
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title">
-      <h2 class="mdl-card__title-text">REGISTRASI OWNER</h2>
+      <h2 class="mdl-card__title-text">REGISTRASI CUSTOMER</h2>
     </div>
 
     <div class="mdl-card__supporting-text">
       <form class="" action="#" method="post">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" name="nama_owner">
-          <label class="mdl-textfield__label" for="nama_owner">Nama Owner</label>
+          <input class="mdl-textfield__input" type="text" name="nama_cust" placeholder="NAMA LENGKAP">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" name="email_owner">
-          <label class="mdl-textfield__label" for="email_owner">Email Owner</label>
+          <input class="mdl-textfield__input" type="text" name="email_cust" placeholder="EMAIL">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" name="notelp_owner">
-          <label class="mdl-textfield__label" for="notelp_owner">No. Telp Owner</label>
+          <input class="mdl-textfield__input" type="number" name="notelp_cust" placeholder="NO. TELP">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" name="uname_owner">
-          <label class="mdl-textfield__label" for="uname_owner">Username Owner</label>
+          <input class="mdl-textfield__input" type="text" name="uname_cust" placeholder="USERNAME">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" name="pass_owner">
-          <label class="mdl-textfield__label" for="password">Password Owner</label>
+          <input class="mdl-textfield__input" type="text" name="pass_cust" placeholder="PASSWORD">
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
+          <input class="mdl-textfield__input" type="text" name="pass_cust2" placeholder="ULANGI PASSWORD">
         </div>
       </form>
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--12-col">
-          Register
-        </a>
-      </div>
+        <input type="submit" name="register" value="REGISTER" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--12-col">
 
-</div>
+      </div>
+    </div>
 </center>
-<?php Include 'foot.php' ?>
