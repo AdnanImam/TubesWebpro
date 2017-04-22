@@ -16,5 +16,8 @@
     public function register(){
       $this->load->view('register');
     }
+    public function profil(){
+      $this->load->view('profil');
+    }
   }
  ?>
