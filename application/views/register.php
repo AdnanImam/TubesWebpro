@@ -48,30 +48,28 @@
     </div>
 
     <div class="mdl-card__supporting-text">
-      <form class="" action="#" method="post">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" name="nama_cust" placeholder="NAMA LENGKAP">
+      <?php echo form_open('televent/insert_user'); ?>
+        <div class="mdl-textfield mdl-cell mdl-cell--12-col">
+          <input type="text" name="nama_cust" placeholder="NAMA LENGKAP" class="mdl-textfield__input">
         </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" name="email_cust" placeholder="EMAIL">
+        <div class="mdl-textfield mdl-cell mdl-cell--12-col">
+          <input  type="text" name="email_cust" placeholder="EMAIL" class="mdl-textfield__input">
         </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="number" name="notelp_cust" placeholder="NO. TELP">
+        <div class="mdl-textfield mdl-cell mdl-cell--12-col">
+          <input type="number" name="notelp_cust" placeholder="NO. TELP" class="mdl-textfield__input">
         </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" name="uname_cust" placeholder="USERNAME">
+        <div class="mdl-textfield mdl-cell mdl-cell--12-col">
+          <input type="text" name="uname_cust" placeholder="USERNAME" class="mdl-textfield__input">
         </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" name="pass_cust" placeholder="PASSWORD">
+        <div class="mdl-textfield mdl-cell mdl-cell--12-col">
+          <input type="text" name="pass_cust" placeholder="PASSWORD" class="mdl-textfield__input" >
         </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" name="pass_cust2" placeholder="ULANGI PASSWORD">
+        <div class="mdl-textfield mdl-cell mdl-cell--12-col">
+          <input type="text" name="pass_cust2" placeholder="KONFIRMASI PASSWORD" class="mdl-textfield__input">
         </div>
-      </form>
       </div>
       <div class="mdl-card__actions mdl-card--border">
         <input type="submit" name="register" value="REGISTER" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--12-col">
-
       </div>
     </div>
 </center>

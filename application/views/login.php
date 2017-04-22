@@ -30,15 +30,14 @@
       <div class="mdl-card__title">
         <h2 class="mdl-card__title-text">LOGIN</h2>
       </div>
+        <?php echo form_open('televent/login_user'); ?>
       <div class="mdl-card__supporting-text">
-        <form class="" action="#" method="post">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
             <input class="mdl-textfield__input" type="text" name="uname" placeholder="USERNAME">
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
             <input class="mdl-textfield__input" type="password" name="password" placeholder="PASSWORD">
           </div>
-        </form>
       </div>
       <div class="mdl-card__actions mdl-card--border">
           <input type="submit" name="login" value="LOGIN" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--12-col">

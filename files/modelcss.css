@@ -123,3 +123,8 @@
                 width: 100%;
                 background-color: #424242;
               }
+              .profil-header{
+                position: static;
+                height: 150px;
+                width: 50%;
+              }
