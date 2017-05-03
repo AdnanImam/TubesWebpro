@@ -10,7 +10,7 @@
 
         <div class="posisi-header">
           <div class="logo-font header-slogan">Telkom University Event</div>
-          <div class="logo-font header-sub-slogan">welcome to Televent... be yourself. do your thing. see what's going on.</div>
+          <div class="logo-font header-sub-slogan">Welcome to Televent... Be Yourself, Do Your Thing, See What's Going On.</div>
           <div class="button">
             <button  onclick="location.href='<?php echo base_url();?>index.php/televent/createevent'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  >
               Create Event
