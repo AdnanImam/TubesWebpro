@@ -30,7 +30,9 @@
       <header class="custom-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <span class="mdl-layout-title" >Televent</span>
+          <span class="mdl-layout-title" >
+                <img src=<?php echo base_url('images/televenticon.png');?> width="auto" height="20" >
+          </span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation. We hide it in small screens. -->
