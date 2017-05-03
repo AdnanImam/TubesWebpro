@@ -23,7 +23,6 @@
         'pass_cust' => $pass_cust,
         'pass_cust2' => $pass_cust2
       );
-
       $passsama=$pass_cust==$pass_cust2;
       if ($passsama){
         $insert = $this->televent_m->insert_user($user);
@@ -58,6 +57,47 @@
       else{
         echo " username dan password salah !";
       }
+    }
+
+    public function login_admin(){
+      $this->load->view('login_admin');
+    }
+
+    public function tambahEvent_admin(){
+      $this->load->view('tambahEvent_admin');
+    }
+
+    public function data(){
+      $this->load->database();
+  			$jumlah_data = $this->televent_m->jumlah_data();
+  			$this->load->library('pagination');
+  			$config['base_url'] = base_url().'index.php/televent/data/';
+  			$config['total_rows'] = $jumlah_data;
+  			$config['per_page'] = 10;
+  			$from = $this->uri->segment(3);
+  			$this->pagination->initialize($config);
+  			$data['user'] = $this->televent_m->data($config['per_page'],$from);
+  			$this->load->view('data',$data);
+    }
+
+    public function deleteevent($id){
+  			$del = $this->televent_m->delete_event($id);
+  			if($del){
+  				redirect('televent/data');
+  			}
+  			else{
+  				echo "gagal";
+  			}
+  		}
+
+    public function login_ad(){
+      $uname = $this->input->post('uname');
+      $password = $this->input->post('password');
+      $where = array(
+        'username_admin' => $uname,
+        'pass_admin' => $password
+      );
+    	redirect('televent/data');
     }
 
     public function logout(){

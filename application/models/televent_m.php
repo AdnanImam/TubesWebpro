@@ -22,5 +22,19 @@
         return $data->result();
       }
     }
+    function data($number,$offset){
+			return $query = $this->db->get("event",$number,$offset)->result();
+		}
+ 
+    function jumlah_data(){
+			return $this->db->get("event")->num_rows();
+		}
+    public function delete_event($id){
+      $con = array(
+        'id_event' => $id
+        );
+      $even = $this->db->delete("event",$con);
+      return $even;
+    }
   }
  ?>
