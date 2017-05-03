@@ -10,5 +10,17 @@
     function cek_login($customer, $where){
       return $this->db->get_where($customer, $where);
     }
+    function insert_file($data){
+      $result = $this->db->insert('event',$data);
+      return $result;
+    }
+    function get_file() {
+      $this->db->select("*");
+      $this->db->from("event");
+      $data = $this->db->get();
+      if ($data->num_rows() > 0) {
+        return $data->result();
+      }
+    }
   }
  ?>

@@ -48,7 +48,7 @@
     </div>
 
     <div class="mdl-card__supporting-text">
-      <form class="" action="#" method="post">
+        <?php echo form_open('televent/upload_file'); ?>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
           <input class="mdl-textfield__input" type="text" id="nama" name="nama"  placeholder="NAMA ACARA">
         </div>
@@ -70,12 +70,23 @@
         </div>
               <!-- Upload File -->
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="file" id="gambar" name="gambar"  placeholder="UPLOAD GAMBAR ACARA">
+          <input class="mdl-textfield__input" type="file" id="filefoto" name="filefoto"  placeholder="UPLOAD GAMBAR ACARA">
         </div>
       </form>
     </div>
     <div class="mdl-card__actions mdl-card--border">
       <input type="submit" name="submit" value="BUAT" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--12-col">
   </div>
+        <?php if(empty($file)){ ?>
+						<a href="#">
+						Data Kosong
+					</a>
+					<?php }else{
+					foreach($file as $value){ ?>
+								<h5 >
+									<small> <?php echo $value->judul ?></small>
+								</h5>
+										<img src="<?php echo base_url("upload/".$value->nama_file)?>"/>
+					<?php }}?>
   </div>
   </center>

@@ -51,7 +51,6 @@
           'nama' => $uname,
           'status' => "login"
         );
-
         $this->session->set_userdata($data_session);
         $this->load->view('profil');
       }
@@ -61,16 +60,56 @@
     }
 
     public function logout(){
-      session_destroy();
+      $this->session->sessio_destroy();
       $this->load->view('login');
     }
 
     public function login(){
       $this->load->view('login');
     }
+
     public function createevent(){
-      $this->load->view('create_event');
+      $file = $this->televent_m->get_file();
+			$data['file'] = $file;
+			$this->load->view('create_event',$data);
     }
+
+		public function upload_file(){
+			$this->load->library('upload');
+			$nmfile = "file_".time(); //nama file saya beri nama langsung dan diikuti fungsi time
+			$config['upload_path'] = './upload/'; //path folder
+			$config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+			$config['max_size'] = '2048'; //maksimum besar file 2M
+			$config['max_width']  = '1288'; //lebar maksimum 1288 px
+			$config['max_height']  = '768'; //tinggi maksimu 768 px
+			$config['file_name'] = $nmfile; //nama yang terupload nantinya
+
+			$this->upload->initialize($config);
+
+			if($_FILES['filefoto']['name'])
+			{
+				if ($this->upload->do_upload('filefoto'))
+				{
+					$value = $this->upload->data();
+					$data = array(
+					  'nama_file' =>$value['file_name'],
+					  'tipe_file' =>$value['file_type'],
+					  'nama' =>$this->input->post('nama'),
+					  'lokasi' =>$this->input->post('lokasi'),
+					  'hari' =>$this->input->post('hari'),
+					  'tanggal' =>$this->input->post('tanggal'),
+					  'pukul' =>$this->input->post('pukul'),
+					  'deskripsi' =>$this->input->post('deskripsi')
+					);
+					$this->televent_m->insert_file($data); //akses model untuk menyimpan ke database
+					//pesan yang muncul jika berhasil diupload pada session flashdata
+					echo "<script>alert ('file berhasil di upload'); window.location.href='"; //.base_url()."index.php/mahasiswa/activity'</script>";//jika berhasil maka akan ditampilkan form upload
+				}else{
+					//pesan yang muncul jika terdapat error dimasukkan pada session flashdata
+					echo "<script>alert ('file gagal di upload'); window.location.href='";//.base_url()."index.php/mahasiswa/activity'</script>"; //jika gagal maka akan ditampilkan form upload
+				}
+		 	}
+		}
     public function register(){
       $this->load->view('register');
     }
