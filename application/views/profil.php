@@ -16,8 +16,8 @@
   <br>
   <br>
   <div class="profil-header">
-  <div class="logo-font header-sub-slogan">welcome <?php echo $this->session->userdata("nama"); ?></div>
-  <a href="<?php echo base_url('televent/logout');?>"> LOGOUT </a>
+  <div class="logo-font header-sub-slogan">Welcome <?php echo $this->session->userdata("nama"); ?></div>
+  <a href="<?php echo base_url('index.php/televent/logout');?>"> LOGOUT </a>
   <br>
   <br>
   <br>

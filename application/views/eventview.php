@@ -5,7 +5,7 @@
 <div class="event-header">
   <div class="posisi-header">
     <div class="event-font event-slogan">EVENT </div>
-    <div class="event-font event-sub-slogan">welcome to Televent... be yourself. do your thing. see what's going on.</div>
+    <div class="event-font event-sub-slogan">Welcome to Televent... Be Yourself, Do Your Thing, See What's Going On.</div>
   </div>
 </div>
 <div class="mdl-grid">

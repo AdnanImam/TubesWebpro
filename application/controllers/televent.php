@@ -61,7 +61,7 @@
     }
 
     public function logout(){
-      $this->session->sessio_destroy();
+      session_destroy();
       $this->load->view('login');
     }
 
