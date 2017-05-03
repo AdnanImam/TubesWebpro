@@ -38,10 +38,10 @@
           <!-- Navigation. We hide it in small screens. -->
           <nav class="mdl-navigation mdl-layout--large-screen-only">
             <a href="<?php echo base_url('index.php/televent') ?>" class="mdl-navigation__link" href="">BERANDA</a>
-            <a href="<?php echo base_url('index.php/televent/login') ?>" class="mdl-navigation__link" href="">LOG IN</a>
-            <a class="mdl-navigation__link" href="">EVENT</a>
+            <a href="<?php echo base_url('index.php/televent/eventview') ?>" class="mdl-navigation__link" href="">EVENT</a>
             <a class="mdl-navigation__link" href="">HELP</a>
             <a class="mdl-navigation__link" href="">ABOUT</a>
+            <a href="<?php echo base_url('index.php/televent/login') ?>" class="mdl-navigation__link" href="">LOG IN</a>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
               mdl-textfield--floating-label mdl-textfield--align-right">
                 <label class="mdl-button mdl-js-button mdl-button--icon"

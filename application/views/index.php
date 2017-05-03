@@ -4,8 +4,8 @@
       <figure>
         <img src="<?php echo base_url('images/slider1.png'); ?>" width="auto" height="660px" />
         <img src="<?php echo base_url('images/slider2.png'); ?>" width="auto" height="660px" />
-        <img src="<?php echo base_url('images/slider1.png'); ?>" width="auto" height="660px" />
-        <img src="<?php echo base_url('images/slider2.png'); ?>" width="auto" height="660px" />
+        <img src="<?php echo base_url('images/slider3.png'); ?>" width="auto" height="660px" />
+        <img src="<?php echo base_url('images/slider4.png'); ?>" width="auto" height="660px" />
         </figure>
 
         <div class="posisi-header">
