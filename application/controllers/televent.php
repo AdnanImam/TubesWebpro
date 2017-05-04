@@ -218,5 +218,11 @@
     public function rancangprofil(){
       $this->load->view('profil_my_event');
     }
+    public function mytiket(){
+      $this->load->view('profil_my_tiket');
+    }
+    public function myevent(){
+      $this->load->view('profil_my_event');
+    }
   }
  ?>
