@@ -81,11 +81,49 @@
   			$data['user'] = $this->televent_m->data($config['per_page'],$from);
   			$this->load->view('data',$data);
     }
-
     public function deleteevent($id){
   			$del = $this->televent_m->delete_event($id);
   			if($del){
   				redirect('televent/data');
+  			}
+  			else{
+  				echo "gagal";
+  			}
+  		}
+
+  		public function edit_event($id)
+  		{
+  			$data['id_event'] = $id;
+  			$this->load->view('edit_event',$data);
+  		}
+
+  		public function action_edit_event($id_event)
+  		{
+  			$id = $this->input->post('id_event');
+  			$nama_event = $this->input->post('nama_event');
+  			$lokasi_event = $this->input->post('lokasi_event');
+  			$tanggal = $this->input->post('tanggal');
+  			$hari = $this->input->post('hari');
+  			$pukul = $this->input->post('pukul');
+  			$deskripsi = $this->input->post('deskripsi');
+  			$cp = $this->input->post('cp');
+        $penyelenggara = $this->input->post('penyelenggara');
+  			$gambar = $this->input->post('gambar');
+  			$where['id_event'] = $id_event;
+  			$value = array(
+  				'nama_event' => $nama_event,
+  				'lokasi_event' => $lokasi_event,
+  				'tanggal' => $tanggal,
+  				'hari' => $hari,
+  				'pukul' => $pukul,
+  				'deskripsi' => $deskripsi,
+  				'cp' => $cp,
+          'penyelenggara' => $penyelenggara,
+  				'gambar' => $gambar
+  			);
+  			$update = $this->televent_m->edit_event($value,$where);
+  			if($update){
+  				redirect('televent/data/');
   			}
   			else{
   				echo "gagal";

@@ -111,6 +111,7 @@
   <div class="form">
     <?php echo form_open('televent/insert_user'); ?>
     <form class="login-form">
+      <h3 align="left">REGISTER</h3>
       <input type="text" name="nama_cust" placeholder="NAMA LENGKAP" />
       <input  type="text" name="email_cust" placeholder="EMAIL"/>
       <input type="number" name="notelp_cust" placeholder="NO. TELP"/>

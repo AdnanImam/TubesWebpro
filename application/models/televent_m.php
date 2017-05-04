@@ -64,5 +64,11 @@
 		);
 		$this->db->insert('booking',$data);//insert data di tabel mhs
 	 }
+    function edit_event($value, $where){
+			$this->db->where($where);
+			$even = $this->db->update("event",$value);
+			return $even;
+		}
+
   }
  ?>
