@@ -134,7 +134,7 @@
               font-family: 'Patua One', cursive;
               font-size:16px;
               font-weight:400;
-              color:#fff;
+              color:#B71C1C;
               @include text-shadow(1px 1px 0px rgba(0,0,0,0.5));
               text-align:left;
               padding:20px;
@@ -192,8 +192,9 @@
   </style>
       <img src="<?php echo base_url('images/profil1.jpg'); ?>" class="profile-img">
     <div class="profile-text">
-      <h1 class="profile-name">Jonathan Doe</h1>
-      <span class="profile-title">EVENT COMMITE</span>
+      <h1 class="profile-name"><?php echo $this->session->userdata("nama"); ?></h1>
+      <span class="profile-title">EVENT COMMITE</span><br>
+      <a href="<?php echo base_url('index.php/televent/logout');?>"> LOGOUT </a>
     </div>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:300,400,700' />
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' />
@@ -209,14 +210,14 @@
     </li>
 
     <li>
-      <a class="navigation__link navigation__link--yellow" href="#about-me">
+      <a class="navigation__link navigation__link--yellow" href="<?php echo base_url('index.php/televent/mytiket') ?>">
         <i class="fa fa-user" aria-hidden="true"></i>
         <p class="navigation__text navigation__text--about-me">My Tiket</p>
       </a>
     </li>
 
     <li>
-      <a class="navigation__link navigation__link--teal" href="#services">
+      <a class="navigation__link navigation__link--teal" href="<?php echo base_url('index.php/televent/myevent') ?>">
         <i class="fa fa-wrench" aria-hidden="true"></i>
         <p class="navigation__text navigation__text--services">My Event</p>
       </a>
@@ -231,7 +232,7 @@
 
   </ul>
 </nav>
-<h4 align="center">DAFTAR EVENT</h4>
+<h4 align="center">DAFTAR TIKET</h4>
 <table>
   <thead>
       <tr>
