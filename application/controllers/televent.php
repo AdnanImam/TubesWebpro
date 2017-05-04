@@ -57,9 +57,9 @@
         $this->session->set_userdata($data_session);
         $this->load->view('profil_my_tiket');
       }
-      else{
-        echo " username dan password salah !";
-      }
+      else {
+  			echo "<script>alert('Gagal login : Periksa Kembali Username dan Password anda !');history.go(-1);</script>";
+  		}
     }
 
     public function insert_event(){
@@ -95,7 +95,7 @@
         redirect('televent/eventview');
       }
       else {
-        echo "gagal";
+        redirect('televent/insert_event');
       }
 
     }

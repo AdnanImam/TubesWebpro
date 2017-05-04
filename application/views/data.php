@@ -15,7 +15,7 @@
 						<div class="sidebar">
 							<ul class="widget widget-menu unstyled">
 								<li class="active">
-									<a href="<?php echo base_url('index.php/televent/tambahEvent_admin') ?>">
+									<a href="<?php echo base_url('index.php/televent/tambaheventadmin') ?>">
 										<i class="menu-icon icon-folder-close"></i>
 										Tambah Event
 									</a>
