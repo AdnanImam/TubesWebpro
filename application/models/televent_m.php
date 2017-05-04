@@ -7,6 +7,10 @@
 			$result = $this->db->insert("customer", $user);
 			return $result;
 		}
+    function insert_event($event){
+      $result = $this->db->insert("event",$event);
+      return $result;
+    }
     function cek_login($customer, $where){
       return $this->db->get_where($customer, $where);
     }
@@ -25,7 +29,7 @@
     function data($number,$offset){
 			return $query = $this->db->get("event",$number,$offset)->result();
 		}
- 
+
     function jumlah_data(){
 			return $this->db->get("event")->num_rows();
 		}
