@@ -6,7 +6,7 @@
     <style media="screen">
 
     </style>
-    
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
@@ -40,7 +40,6 @@
           <nav class="mdl-navigation mdl-layout--large-screen-only">
             <a href="<?php echo base_url('index.php/televent') ?>" class="mdl-navigation__link" href="">BERANDA</a>
             <a href="<?php echo base_url('index.php/televent/eventview') ?>" class="mdl-navigation__link" href="">EVENT</a>
-            <a class="mdl-navigation__link" href="">HELP</a>
             <a class="mdl-navigation__link" href="">ABOUT</a>
             <a href="<?php echo base_url('index.php/televent/login') ?>" class="mdl-navigation__link" href="">LOG IN</a>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable

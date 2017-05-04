@@ -39,14 +39,14 @@
     							<div class="module-body">
     								<div class="stream-composer media">
     									<div class="media-body">
-    										<?php echo form_open("mahasiswa/proses_input"); ?>
+    										<?php echo form_open("televent/tambaheventadmin"); ?>
     											<h5>Nama :</h5><?php echo form_error('nama', '<div style="color:red">','</div>');?>
     											<div class="row-fluid">
     												<textarea type="text" name="nama" class="span12" style="height: 30px; resize: none;" placeholder="Nama"></textarea>
     											</div>
     											<h5>Lokasi :</h5><?php echo form_error('lokasi', '<div style="color:red">','</div>');?>
     											<div class="row-fluid">
-    												<textarea type="text" name="Lokasi" class="span12" style="height: 30px; resize: none;" placeholder="Lokasi"></textarea>
+    												<textarea type="text" name="lokasi" class="span12" style="height: 30px; resize: none;" placeholder="Lokasi"></textarea>
     											</div>
     											<h5>Tanggal :</h5><?php echo form_error('tanggal', '<div style="color:red">','</div>');?>
     											<div class="row-fluid">
@@ -72,12 +72,7 @@
     											<div class="row-fluid">
     												<textarea type="text" name="penyelenggara" class="span12" style="height: 30px; resize: none;" placeholder="ex: UKM KBMS"></textarea>
     											</div>
-                          <h5>Upload Gambar</h5>
 													<input type="file" name="filefoto">
-  												<div class="clearfix">
-  													<input type="submit" name="submit" value="Upload File" class="btn btn-primary pull-right">
-  													<p>&nbsp;</p>
-  												</div>
     											<br></br>
     											<div class="clearfix">
     												<input type="submit" name="submit" value="Buat Event" class="btn btn-primary pull-right">

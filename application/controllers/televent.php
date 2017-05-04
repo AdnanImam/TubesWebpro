@@ -104,10 +104,6 @@
       $this->load->view('login_admin');
     }
 
-    public function tambahEvent_admin(){
-      $this->load->view('tambahEvent_admin');
-    }
-
     public function data(){
       $this->load->database();
   			$jumlah_data = $this->televent_m->jumlah_data();
@@ -197,6 +193,14 @@
 		  }
       $this->load->view('bookingevent');
     }
+    public function tambaheventadmin(){
+      if($this->input->post('submit')){
+  			$this->televent_m->tambaheventadmin();
+  			redirect('televent/data');
+		  }
+      $this->load->view('tambaheventadmin');
+    }
+
     public function register(){
       $this->load->view('register');
     }
