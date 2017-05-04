@@ -3,10 +3,9 @@
     @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
     .login-page {
-    width: 500px;
-    padding-left: 800px;
+    width: 400px;
+    padding-left: 850px;
     padding-top: 20px;
-    padding-bottom: 20px;
     }
     .png-page {
       position: absolute;
@@ -22,17 +21,6 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     }
     .form input {
-    font-family: "Roboto", sans-serif;
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-    }
-    .form textarea {
     font-family: "Roboto", sans-serif;
     outline: 0;
     background: #f2f2f2;
@@ -115,22 +103,14 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
-      div.upload {
-        width: 157px;
-        height: 57px;
-        background: url(https://lh6.googleusercontent.com/-dqTIJRTqEAQ/UJaofTQm3hI/AAAAAAAABHo/w7ruR1SOIsA/s157/upload.png);
-        overflow: hidden;
-    }
 </style>
 <div class="png-page">
       <img src="<?php echo base_url('images/register.jpg'); ?>" width="auto" height="669px" />
 </div>
 <div class="login-page">
   <div class="form">
-    <?php echo form_open('televent/insert_event'); ?>
+    <?php echo form_open('televent/insert_user'); ?>
     <form class="login-form">
-      <h2 align="left">CREATE EVENT</h2>
-
       <input class="mdl-textfield__input" type="text" id="nama" name="nama"  placeholder="NAMA ACARA">
 
       <input class="mdl-textfield__input" type="text" id="lokasi" name="lokasi"  placeholder="LOKASI">
@@ -140,16 +120,24 @@
       <input class="mdl-textfield__input" type="date" id="tanggal" name="tanggal"  placeholder="TANGGAL">
 
       <input class="mdl-textfield__input" type="time" id="pukul" name="pukul"  placeholder="PUKUL">
-      <p align="left">Deskripsi Event</p>
-      <textarea rows="10" cols="60" class="mdl-textfield__input" type="text" id="desk" name="desk" placeholder="DESKRIPSI">
+
+      <textarea rows="10" cols="70" class="mdl-textfield__input" type="text" id="desk" name="desk" placeholder="DESKRIPSI">
       </textarea>
-          <input type="file" name="eventimage" size="20" />
 
-
-
-      <button>CREATE</button>
+      <button>register</button>
       <p class="message">Telah Memiliki Akun? <a href="<?php echo base_url('index.php/televent/login') ?>">Login Disini</a></p>
     </form>
+    <?php if(empty($file)){ ?>
+        <a href="#">
+        Data Kosong
+      </a>
+      <?php }else{
+      foreach($file as $value){ ?>
+            <h5 >
+              <small> <?php echo $value->judul ?></small>
+            </h5>
+                <img src="<?php echo base_url("upload/".$value->nama_file)?>"/>
+      <?php }}?>
   </div>
 
 </div>
