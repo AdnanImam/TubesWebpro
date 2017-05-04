@@ -3,7 +3,9 @@
     function __construct(){
       parent::__construct();
       $this->load->model('televent_m');
+      $this->load->helper(array('form', 'url'));
     }
+
     public function index(){
       $this->load->database();
         $jumlah_data = $this->televent_m->jumlah_data();
@@ -66,6 +68,44 @@
       else{
         echo " username dan password salah !";
       }
+    }
+
+    public function insert_event(){
+      $config['upload_path']          = '/uploads';
+               $config['allowed_types']        = 'gif|jpg|png';
+               $config['max_size']             = 100;
+               $config['max_width']            = 1024;
+               $config['max_height']           = 768;
+
+               $this->load->library('upload', $config);
+               $this->upload->do_upload('eventimage');
+               $data_upload_files = $this->upload->data();
+               $image = $data_upload_files[full_path];
+
+      $nama=$this->input->post('nama');
+      $lokasi=$this->input->post('lokasi');
+      $hari=$this->input->post('hari');
+      $tanggal=$this->input->post('tanggal');
+      $pukul=$this->input->post('pukul');
+      $desk=$this->input->post('desk');
+
+      $event = array(
+        'nama_event'=> $nama,
+        'lokasi_event'=> $lokasi,
+        'hari'=> $hari,
+        'tanggal'=> $tanggal,
+        'pukul'=> $pukul,
+        'deskripsi'=> $desk,
+        'gambar' => $image,
+      );
+      $insert = $this->televent_m->insert_event($event);
+      if($insert){
+        redirect('televent/eventview');
+      }
+      else {
+        echo "gagal";
+      }
+
     }
 
     public function login_admin(){
@@ -166,6 +206,9 @@
     }
     public function eventview(){
       $this->load->view('eventview');
+    }
+    public function rancangprofil(){
+      $this->load->view('profil_my_event');
     }
   }
  ?>

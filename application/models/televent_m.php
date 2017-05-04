@@ -7,6 +7,10 @@
 			$result = $this->db->insert("customer", $user);
 			return $result;
 		}
+    function insert_event($event){
+      $result = $this->db->insert("event",$event);
+      return $result;
+    }
     function cek_login($customer, $where){
       return $this->db->get_where($customer, $where);
     }
