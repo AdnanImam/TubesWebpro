@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2017 at 12:28 PM
+-- Generation Time: May 04, 2017 at 04:14 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -80,6 +80,7 @@ CREATE TABLE `event` (
   `pukul` time NOT NULL,
   `deskripsi` longtext NOT NULL,
   `cp` varchar(12) NOT NULL,
+  `penyelenggara` varchar(35) NOT NULL,
   `gambar` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -87,10 +88,10 @@ CREATE TABLE `event` (
 -- Dumping data for table `event`
 --
 
-INSERT INTO `event` (`id_event`, `nama_event`, `lokasi_event`, `tanggal`, `hari`, `pukul`, `deskripsi`, `cp`, `gambar`) VALUES
-(2, 'FESBUD KBMS', 'TUCH Telkom University', '2017-05-09', 'Sabtu', '19:00:00', 'sebagai perayaan tahunan acara UKM KBMS yang dikemas dengan campuran ragam tarian yang ada serta musik.', '1411567', ''),
-(3, 'NI HON NO MATSURI', 'TUCH Telkom University', '2017-04-25', 'Selasa', '18:30:00', 'Acara Perhelatan kebudayaan Jepang', '081201082444', ''),
-(4, 'Dies Natalis Himadif', 'GSG, Telkom University', '2017-05-17', 'sabtu', '19:27:00', 'sebagai malm puncak perayaan Ulang tahun Himadif, Prodi D3 Teknik Infomatika', '081213456712', '');
+INSERT INTO `event` (`id_event`, `nama_event`, `lokasi_event`, `tanggal`, `hari`, `pukul`, `deskripsi`, `cp`, `penyelenggara`, `gambar`) VALUES
+(2, 'Forum Perempuan', 'GSG, Telkom Unniversity', '2017-05-04', 'Kamis', '13:48:00', 'sebagai bentuk perayaan hari kartini dan apresiasi kepada wanita wanita tangguh yang ada di D3 Teknik Informatika', '082132123452', 'HIMADIF', ''),
+(3, 'NI HON NO MATSURI', 'TUCH Telkom University', '2017-04-25', 'Selasa', '18:30:00', 'Acara Perhelatan kebudayaan Jepang', '081201082444', 'UKM JEPANG', ''),
+(4, 'Dies Natalis Himadif', 'GSG, Telkom University', '2017-05-17', 'sabtu', '19:27:00', 'sebagai malm puncak perayaan Ulang tahun Himadif, Prodi D3 Teknik Infomatika', '081213456712', 'HIMADIF', '');
 
 -- --------------------------------------------------------
 
