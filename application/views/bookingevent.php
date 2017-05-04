@@ -59,10 +59,10 @@
           <input class="mdl-textfield__input" type="text" id="jurusan" name="jurusan"  placeholder="JURUSAN" required="">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="date" id="nohp" name="nohp"  placeholder="No. Telp" required="">
+          <input class="mdl-textfield__input" type="text" id="nohp" name="nohp"  placeholder="No. Telp" required="">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="time" id="email" name="email"  placeholder="Email" required="">
+          <input class="mdl-textfield__input" type="text" id="email" name="email"  placeholder="Email" required="">
         </div>
     </div>
     <div class="mdl-card__actions mdl-card--border">
