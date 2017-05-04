@@ -55,7 +55,7 @@
         );
 
         $this->session->set_userdata($data_session);
-        $this->load->view('profil');
+        $this->load->view('profil_my_tiket');
       }
       else{
         echo " username dan password salah !";
@@ -201,7 +201,7 @@
       $this->load->view('register');
     }
     public function profil(){
-      $this->load->view('profil');
+      $this->load->view('profil_my_tiket');
     }
     public function eventview(){
       $this->load->database();
