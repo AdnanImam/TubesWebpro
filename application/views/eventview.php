@@ -9,52 +9,31 @@
   </div>
 </div>
 <div class="mdl-grid">
-
-<div class="mdl-cell mdl-cell--4-col">
-  <div class="demo-card-square mdl-card mdl-shadow--2dp">
-    <div class="mdl-card__title mdl-card--expand">
-      <h2 class="mdl-card__title-text">Fesbud KBMS</h2>
-    </div>
-    <div class="mdl-card__supporting-text">
-      Fesbud KBMS menggabungkan unsur unsur budaya yang ada di Sulawesi, yang dikemas dengan menggabungkan musik khas, tarian, dan drama teater.
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-        View Event
-      </a>
-    </div>
+  <?php
+    $no = $this->uri->segment('3') + 1;
+    foreach($user as $u){
+  ?>
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title mdl-card--expand">
+        <?php echo $u->lokasi_event ?> <br> <?php echo $u->tanggal ?>
+        <h2 class="mdl-card__title-text">
+          <?php echo $u->nama_event ?></h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <?php echo $u->deskripsi ?>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <button onclick="location.href='<?php echo base_url();?>index.php/televent/bookingevent'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          Booking
+        </button>
+      </div>
+      </div>
   </div>
-</div>
-<div class="mdl-cell mdl-cell--4-col">
-  <div class="demo-card-square mdl-card mdl-shadow--2dp">
-    <div class="mdl-card__title mdl-card--expand">
-      <h2 class="mdl-card__title-text">Nihon No Matsuri</h2>
-    </div>
-    <div class="mdl-card__supporting-text">
-      Acara perhelatan atau pengenalan kebuadayaan Jepang
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-        View Event
-      </a>
-    </div>
-  </div>
-</div>
-<div class="mdl-cell mdl-cell--4-col">
-    <div class="demo-card-square mdl-card mdl-shadow--2dp">
-    <div class="mdl-card__title mdl-card--expand">
-      <h2 class="mdl-card__title-text">Dies Natalis Himadif</h2>
-    </div>
-    <div class="mdl-card__supporting-text">
-      Acara Ulang tahun Himadif yang merupakan malam puncak dari serangkaian acaranya yang telah dilaksankan sebelumnya. Dikemas dengan konsep yang elegant dan penampilan dari perwakilan tiap kelas.
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-        View Event
-      </a>
-    </div>
-  </div>
-</div>
+<?php } ?>
+<?php
+  echo $this->pagination->create_links();
+?>
 </div>
 
 <?php include 'foot.php'; ?>
