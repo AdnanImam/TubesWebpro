@@ -105,6 +105,7 @@
     <div class="form">
 
       <form class="login-form">
+        <h3 align="CENTER">LOGIN</h3>
         <input type="text" name="uname" placeholder="username"/>
         <input type="password" name="password" placeholder="password"/>
 
