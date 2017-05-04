@@ -22,10 +22,22 @@
         return $data->result();
       }
     }
+
+    function get_all(){
+      $ambil_data = $this->db->get('booking');//mengambil tabel mhs
+		    //jika data lebih dari 0
+		  if ($ambil_data->num_rows() > 0 ){
+				foreach ($ambil_data->result() as $data){
+				      $hasil[] = $data;
+			         }
+			  return $hasil;
+		  }
+    }
+
     function data($number,$offset){
 			return $query = $this->db->get("event",$number,$offset)->result();
 		}
- 
+
     function jumlah_data(){
 			return $this->db->get("event")->num_rows();
 		}
@@ -36,5 +48,21 @@
       $even = $this->db->delete("event",$con);
       return $even;
     }
+
+  function booking(){
+		$nim = $this->input->post('nim'); //input nim
+		$nama  = $this->input->post('nama'); //input nama
+		$jurusan = $this->input->post('jurusan'); //input kelas
+    $nohp = $this->input->post('nohp'); //input nomor_hp
+    $email = $this->input->post('email'); //input email
+		$data = array (
+			'nim_mhs' => $nim,  //input kedalam field nim
+			'nama_mhs'  => $nama, //input kedalam field nama
+			'jurusan_mhs'=> $jurusan, //input kedalam field jurusan
+      'no_telp' => $nohp, //input kedalam field nomor_hp
+      'email_mhs' => $email //input kedalam field email
+		);
+		$this->db->insert('booking',$data);//insert data di tabel mhs
+	 }
   }
  ?>

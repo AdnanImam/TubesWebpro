@@ -3,18 +3,11 @@
     function __construct(){
       parent::__construct();
       $this->load->model('televent_m');
+      $this->load->helper(array('url', 'form'));
     }
     public function index(){
-      $this->load->database();
-        $jumlah_data = $this->televent_m->jumlah_data();
-        $this->load->library('pagination');
-        $config['base_url'] = base_url().'index.php/televent/';
-        $config['total_rows'] = $jumlah_data;
-        $config['per_page'] = 10;
-        $from = $this->uri->segment(3);
-        $this->pagination->initialize($config);
-        $data['user'] = $this->televent_m->data($config['per_page'],$from);
-        $this->load->view('index',$data);
+      $data['hasil'] = $this->televent_m->get_all();
+        $this->load->view('index');
     }
     public function insert_user(){
       $nama_cust = $this->input->post('nama_cust');
@@ -120,6 +113,13 @@
     public function createevent(){
       $this->load->view('create_event');
     }
+    public function bookingevent(){
+      if($this->input->post('submit')){
+  			$this->televent_m->booking();
+  			redirect('televent');
+		  }
+      $this->load->view('bookingevent');
+    }
     public function register(){
       $this->load->view('register');
     }
@@ -127,7 +127,16 @@
       $this->load->view('profil');
     }
     public function eventview(){
-      $this->load->view('eventview');
+      $this->load->database();
+        $jumlah_data = $this->televent_m->jumlah_data();
+        $this->load->library('pagination');
+        $config['base_url'] = base_url().'index.php/televent/eventview';
+        $config['total_rows'] = $jumlah_data;
+        $config['per_page'] = 10;
+        $from = $this->uri->segment(3);
+        $this->pagination->initialize($config);
+        $data['user'] = $this->televent_m->data($config['per_page'],$from);
+        $this->load->view('eventview',$data);
     }
   }
  ?>
