@@ -57,9 +57,9 @@
         $this->session->set_userdata($data_session);
         $this->load->view('profil_my_tiket');
       }
-      else{
-        echo " username dan password salah !";
-      }
+      else {
+  			echo "<script>alert('Gagal login : Periksa Kembali Username dan Password anda !');history.go(-1);</script>";
+  		}
     }
 
     public function insert_event(){
@@ -95,17 +95,13 @@
         redirect('televent/eventview');
       }
       else {
-        echo "gagal";
+        redirect('televent/insert_event');
       }
 
     }
 
     public function login_admin(){
       $this->load->view('login_admin');
-    }
-
-    public function tambahEvent_admin(){
-      $this->load->view('tambahEvent_admin');
     }
 
     public function data(){
@@ -197,6 +193,14 @@
 		  }
       $this->load->view('bookingevent');
     }
+    public function tambaheventadmin(){
+      if($this->input->post('submit')){
+  			$this->televent_m->tambaheventadmin();
+  			redirect('televent/data');
+		  }
+      $this->load->view('tambaheventadmin');
+    }
+
     public function register(){
       $this->load->view('register');
     }
