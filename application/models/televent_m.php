@@ -25,7 +25,7 @@
     function data($number,$offset){
 			return $query = $this->db->get("event",$number,$offset)->result();
 		}
- 
+
     function jumlah_data(){
 			return $this->db->get("event")->num_rows();
 		}
@@ -36,5 +36,10 @@
       $even = $this->db->delete("event",$con);
       return $even;
     }
+    function edit_event($value, $where){
+			$this->db->where($where);
+			$even = $this->db->update("event",$value);
+			return $even;
+		}
   }
  ?>

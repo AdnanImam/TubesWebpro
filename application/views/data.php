@@ -2,7 +2,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Modul 10</title>
+		<title>List Event</title>
 		<link type="text/css" href="<?php echo base_url('files/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
 		<link type="text/css" href="<?php echo base_url('files/bootstrap/css/bootstrap-responsive.min.css') ?>" rel="stylesheet">
 		<link type="text/css" href="<?php echo base_url('files/css/theme.css') ?>" rel="stylesheet">
@@ -37,6 +37,7 @@
                     <thead>
                       <tr>
                         <th><center>No</center></th>
+												<th><center>ID</center></th>
                         <th><center>Nama</center></th>
                         <th><center>Lokasi</center></th>
                         <th><center>tanggal</center></th>
@@ -44,6 +45,7 @@
                         <th><center>pukul</center></th>
                         <th><center>deskripsi</center></th>
                         <th><center>cp</center></th>
+												<th><center>penyelenggara</center></th>
                         <th><center>gambar</center></th>
                       </tr>
                     </thead>
@@ -54,6 +56,7 @@
                         ?>
                         <tr>
                           <td><?php echo $no++; ?></td>
+													<td><?php echo $u->id_event ?></td>
                           <td><?php echo $u->nama_event ?></td>
                           <td><?php echo $u->lokasi_event ?></td>
                           <td><?php echo $u->tanggal ?></td>
@@ -61,8 +64,10 @@
                           <td><?php echo $u->pukul ?></td>
                           <td><?php echo $u->deskripsi ?></td>
                           <td><?php echo $u->cp ?></td>
+													<td><?php echo $u->penyelenggara ?></td>
                           <td><?php echo $u->gambar ?></td>
-                          <td><a href="<?php echo base_url('index.php/televent/deleteevent/'.$u->id_event)?> ">hapus</a> </center></td>
+                          <td><center> <a href="<?php echo base_url('index.php/televent/edit_event/'.$u->id_event)?>">edit</a> |
+														<a href="<?php echo base_url('index.php/televent/deleteevent/'.$u->id_event)?> ">hapus</a> </center></td>
                         </tr>
                         <?php } ?>
                     </tbody>
