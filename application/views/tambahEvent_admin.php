@@ -42,35 +42,35 @@
     										<?php echo form_open("mahasiswa/proses_input"); ?>
     											<h5>Nama :</h5><?php echo form_error('nama', '<div style="color:red">','</div>');?>
     											<div class="row-fluid">
-    												<textarea type="text" name="nama" class="span12" style="height: 30px; resize: none;"></textarea>
+    												<textarea type="text" name="nama" class="span12" style="height: 30px; resize: none;" placeholder="Nama"></textarea>
     											</div>
     											<h5>Lokasi :</h5><?php echo form_error('lokasi', '<div style="color:red">','</div>');?>
     											<div class="row-fluid">
-    												<textarea type="text" name="Lokasi" class="span12" style="height: 30px; resize: none;"></textarea>
+    												<textarea type="text" name="Lokasi" class="span12" style="height: 30px; resize: none;" placeholder="Lokasi"></textarea>
     											</div>
     											<h5>Tanggal :</h5><?php echo form_error('tanggal', '<div style="color:red">','</div>');?>
     											<div class="row-fluid">
-    												<textarea type="date" name="tanggal" class="span12" style="height: 30px; resize: none;"></textarea>
+    												<input type="date" name="tanggal" class="span12" style="height: 30px; resize: none;" placeholder="Tanggal"></textarea>
     											</div>
     											<h5>Hari :</h5><?php echo form_error('hari', '<div style="color:red">','</div>');?>
     											<div class="row-fluid">
-    												<textarea type="text" name="hari" class="span12" style="height: 30px; resize: none;"></textarea>
+    												<textarea type="text" name="hari" class="span12" style="height: 30px; resize: none;" placeholder="Hari"></textarea>
     											</div>
                           <h5>Pukul :</h5><?php echo form_error('pukul', '<div style="color:red">','</div>');?>
     											<div class="row-fluid">
-    												<textarea type="time" name="pukul" class="span12" style="height: 30px; resize: none;"></textarea>
+    												<input type="time" name="pukul" class="span12" style="height: 30px; resize: none;" placeholder="pukul, ex: 19.00 PM"></textarea>
     											</div>
                           <h5>Deskripsi :</h5><?php echo form_error('deskripsi', '<div style="color:red">','</div>');?>
     											<div class="row-fluid">
-    												<textarea type="longtext" name="deskripsi" class="span12" style="height: 30px; resize: none;"></textarea>
+    												<textarea type="longtext" name="deskripsi" rows = "10" cols "70" class="span12" placeholder="Deskripsi"></textarea>
     											</div>
                           <h5>Contact Person :</h5><?php echo form_error('cp', '<div style="color:red">','</div>');?>
     											<div class="row-fluid">
-    												<textarea type="number" name="cp" class="span12" style="height: 30px; resize: none;"></textarea>
+    												<input type="number" name="cp" class="span12" style="height: 30px; resize: none;" placeholder="ex: 082103098087"></textarea>
     											</div>
                           <h5>Penyelenggara :</h5><?php echo form_error('penyelenggara', '<div style="color:red">','</div>');?>
     											<div class="row-fluid">
-    												<textarea type="text" name="penyelenggara" class="span12" style="height: 30px; resize: none;"></textarea>
+    												<textarea type="text" name="penyelenggara" class="span12" style="height: 30px; resize: none;" placeholder="ex: UKM KBMS"></textarea>
     											</div>
                           <h5>Upload Gambar</h5>
 													<input type="file" name="filefoto">
