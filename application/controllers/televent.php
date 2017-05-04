@@ -5,7 +5,16 @@
       $this->load->model('televent_m');
     }
     public function index(){
-      $this->load->view('index');
+      $this->load->database();
+        $jumlah_data = $this->televent_m->jumlah_data();
+        $this->load->library('pagination');
+        $config['base_url'] = base_url().'index.php/televent/';
+        $config['total_rows'] = $jumlah_data;
+        $config['per_page'] = 10;
+        $from = $this->uri->segment(3);
+        $this->pagination->initialize($config);
+        $data['user'] = $this->televent_m->data($config['per_page'],$from);
+        $this->load->view('index',$data);
     }
     public function insert_user(){
       $nama_cust = $this->input->post('nama_cust');
