@@ -50,19 +50,19 @@
     <div class="mdl-card__supporting-text">
       <?php echo form_open('televent/bookingevent'); ?>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" id="nim" name="nim"  placeholder="NIM" required="">
+          <input class="mdl-textfield__input" type="text" id="nim" name="nim"  placeholder="Masukkan NIM" required="">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" id="nama" name="nama"  placeholder="NAMA LENGKAP" required="">
+          <input class="mdl-textfield__input" type="text" id="nama" name="nama"  placeholder="Masukkan Nama Lengkap" required="">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" id="jurusan" name="jurusan"  placeholder="JURUSAN" required="">
+          <input class="mdl-textfield__input" type="text" id="jurusan" name="jurusan"  placeholder="Masukkan Jurusan" required="">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" id="nohp" name="nohp"  placeholder="No. Telp" required="">
+          <input class="mdl-textfield__input" type="text" id="nohp" name="nohp"  placeholder="Masukkan No.Telp" required="">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-          <input class="mdl-textfield__input" type="text" id="email" name="email"  placeholder="Email" required="">
+          <input class="mdl-textfield__input" type="text" id="email" name="email"  placeholder="Masukkan Email" required="">
         </div>
     </div>
     <div class="mdl-card__actions mdl-card--border">
