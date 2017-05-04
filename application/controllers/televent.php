@@ -215,9 +215,6 @@
         $data['user'] = $this->televent_m->data($config['per_page'],$from);
         $this->load->view('eventview',$data);
     }
-    public function rancangprofil(){
-      $this->load->view('profil_my_event');
-    }
     public function mytiket(){
       $this->load->view('profil_my_tiket');
     }
