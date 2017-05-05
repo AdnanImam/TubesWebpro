@@ -197,6 +197,13 @@
 		  }
       $this->load->view('bookingevent');
     }
+    public function tambaheventadmin(){
+      if($this->input->post('submit')){
+  			$this->televent_m->tambaheventadmin();
+  			redirect('televent/data');
+		  }
+      $this->load->view('tambaheventadmin');
+    }
     public function register(){
       $this->load->view('register');
     }
