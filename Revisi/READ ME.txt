@@ -1,0 +1,8 @@
+YOUNG CELEBES ART STUDIO (Y-CAS)
+
+Anggota Kelompok :
+1. Adnan Imam Hidayat - 6706154059
+2. Dian Eka Muzdalifah - 6706154155
+3. Khaeruz Zahra - 6706154167
+
+Deskripsi Sistem Televent : Televent adalah system manajemen informasi event yang ada di Telkom university. Televent memudahkan civitas akademika dalam mengetahui informasi event dan mendaftar event tersebut.
