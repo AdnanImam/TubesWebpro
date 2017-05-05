@@ -123,7 +123,7 @@
     }
 </style>
 <div class="png-page">
-      <img src="<?php echo base_url('images/register.jpg'); ?>" width="auto" height="669px" />
+      <img src="<?php echo base_url('images/createevent.jpg'); ?>" width="auto" height="669px" />
 </div>
 <div class="login-page">
   <div class="form">
@@ -150,7 +150,6 @@
 
 
       <button>CREATE</button>
-      <p class="message">Telah Memiliki Akun? <a href="<?php echo base_url('index.php/televent/login') ?>">Login Disini</a></p>
     </form>
   </div>
 
