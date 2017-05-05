@@ -234,39 +234,37 @@
     </ul>
   </nav>
   <h4 align="center">DAFTAR EVENT</h4>
+
   <table>
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Weight (kg)</th>
-            <th>Profession</th>
+            <th>No.</th>
+            <th>Nama</th>
+            <th>Lokasi</th>
+            <th>Tanggal</th>
+            <th>Hari</th>
+            <th>Pukul</th>
+            <th>Deskripsi</th>
+            <th>CP</th>
+            <th>Penyelenggara</th>
         </tr>
     </thead>
     <tbody>
+        <?php
+          $no = $this->uri->segment('3') + 1;
+          foreach($user as $u){
+        ?>
         <tr>
-            <td>Carolina Biggleswade</td>
-            <td>23</td>
-            <td>65</td>
-            <td>Jockey</td>
+          <td><?php echo $no++; ?></td>
+          <td><?php echo $u->nama_event ?></td>
+          <td><?php echo $u->lokasi_event ?></td>
+          <td><?php echo $u->tanggal ?></td>
+          <td><?php echo $u->hari ?></td>
+          <td><?php echo $u->pukul ?></td>
+          <td><?php echo $u->deskripsi ?></td>
+          <td><?php echo $u->cp ?></td>
+          <td><?php echo $u->penyelenggara ?></td>
         </tr>
-        <tr>
-            <td>Harry Sparrowhead</td>
-            <td>34</td>
-            <td>89</td>
-            <td>Trainer</td>
-        </tr>
-        <tr>
-            <td>Marjorie Doors</td>
-            <td>32</td>
-            <td>76</td>
-            <td>Yard Manager</td>
-        </tr>
-        <tr>
-            <td>Earnest Piggington-Smithe</td>
-            <td>18</td>
-            <td>98</td>
-            <td>Groom</td>
-        </tr>
+        <?php } ?>
     </tbody>
 </table>
