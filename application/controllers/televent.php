@@ -80,7 +80,8 @@
       $tanggal=$this->input->post('tanggal');
       $pukul=$this->input->post('pukul');
       $desk=$this->input->post('desk');
-
+      $cp=$this->input->post('cp');
+      $penyelenggara=$this->input->post('penyelenggara');
       $event = array(
         'nama_event'=> $nama,
         'lokasi_event'=> $lokasi,
@@ -88,6 +89,8 @@
         'tanggal'=> $tanggal,
         'pukul'=> $pukul,
         'deskripsi'=> $desk,
+        'cp'=> $cp,
+        'penyelenggara'=> $penyelenggara,
         'gambar' => $image,
       );
       $insert = $this->televent_m->insert_event($event);

@@ -131,18 +131,20 @@
     <form class="login-form">
       <h2 align="left">CREATE EVENT</h2>
 
-      <input class="mdl-textfield__input" type="text" id="nama" name="nama"  placeholder="NAMA ACARA">
+      <input class="mdl-textfield__input" type="text" id="nama" name="nama"  placeholder="NAMA ACARA" required="">
 
-      <input class="mdl-textfield__input" type="text" id="lokasi" name="lokasi"  placeholder="LOKASI">
+      <input class="mdl-textfield__input" type="text" id="lokasi" name="lokasi"  placeholder="LOKASI"  required="">
 
-      <input class="mdl-textfield__input" type="text" id="hari" name="hari"  placeholder="HARI">
+      <input class="mdl-textfield__input" type="text" id="hari" name="hari"  placeholder="HARI"  required="">
 
-      <input class="mdl-textfield__input" type="date" id="tanggal" name="tanggal"  placeholder="TANGGAL">
+      <input class="mdl-textfield__input" type="date" id="tanggal" name="tanggal"  placeholder="TANGGAL"  required="">
 
-      <input class="mdl-textfield__input" type="time" id="pukul" name="pukul"  placeholder="PUKUL">
+      <input class="mdl-textfield__input" type="time" id="pukul" name="pukul"  placeholder="PUKUL"  required="">
       <p align="left">Deskripsi Event</p>
-      <textarea rows="10" cols="60" class="mdl-textfield__input" type="text" id="desk" name="desk" placeholder="DESKRIPSI">
+      <textarea rows="10" cols="60" class="mdl-textfield__input" type="text" id="desk" name="desk" placeholder="DESKRIPSI"  required="">
       </textarea>
+      <input class="mdl-textfield__input" type="number" id="cp" name="cp"  placeholder="CONTACT PERSON"  required="">
+      <input class="mdl-textfield__input" type="text" id="penyelenggara" name="penyelenggara"  placeholder="PENYELENGGARA"  required="">
           <input type="file" name="eventimage" size="20" />
 
 
