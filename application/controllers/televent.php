@@ -226,7 +226,16 @@
         $this->load->view('eventview',$data);
     }
     public function mytiket(){
-      $this->load->view('profil_my_tiket');
+      $this->load->database();
+  			$jumlah_data = $this->televent_m->jumlah_data();
+  			$this->load->library('pagination');
+  			$config['base_url'] = base_url().'index.php/televent/mytiket/';
+  			$config['total_rows'] = $jumlah_data;
+  			$config['per_page'] = 10;
+  			$from = $this->uri->segment(3);
+  			$this->pagination->initialize($config);
+  			$data['user'] = $this->televent_m->data($config['per_page'],$from);
+  			$this->load->view('profil_my_tiket',$data);
     }
     public function myevent(){
       $this->load->database();
